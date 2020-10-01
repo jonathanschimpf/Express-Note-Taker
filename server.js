@@ -7,8 +7,12 @@ const app = express();
 var PORT = process.env.PORT || 7000;
 
 
+// sets up express to handle parsing
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
+var note = [];
 
 // api routes
 
@@ -16,14 +20,47 @@ var PORT = process.env.PORT || 7000;
 // get data from db.json
 // return res.json(data);
 
+app.get("/api/notes", function(req, res) {
+   
+   
+    
+    return res.json(note);
+
+});
+
 // post /api/notes
 // receive JSON obj from the front end
 // return res.status(200).end();
 
+app.post("/api/notes", function(req, res) {
+   
+    var newNoteEntry = req.body;
+
+    console.log(newNoteEntry);
+
+    note.push(newNoteEntry);
+
+    return res.status(200).end();
+
+});
+
 // delete /api/notes/:id
+
+app.delete("/api/notes/:id", function(req, res) {
+   
+    
+    return res.send(note);
+
+});
 
 
 // ^above needs much work
+//+++++++++++++++++++++++++++++++++
+
+
+
+
+
 //+++++++++++++++++++++++++++++++++
 // * below is more or less complete.
 
