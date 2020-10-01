@@ -47,9 +47,12 @@ app.post("/api/notes", function(req, res) {
 // delete /api/notes/:id
 
 app.delete("/api/notes/:id", function(req, res) {
-   
+
+   note = [];
     
-    return res.send(note);
+//res.send([]) or something similar to send back all 
+
+  delete  res.jason(note);
 
 });
 
