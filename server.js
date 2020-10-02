@@ -80,7 +80,8 @@ app.post("/api/notes", function (req, res) {
 
 app.delete("/api/notes/:id", function (req, res) {
 
-    var deletedNote = note.filter(note => note.id != req.params.id);
+    var deletedNote = note.filter(note => note.id === req.params.id);
+    
 
     fs.writeFileSync("./db/db.json", JSON.stringify(deletedNote), "UTF8", function (err) {
 
