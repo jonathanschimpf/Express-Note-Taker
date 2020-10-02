@@ -33,13 +33,13 @@ var note = require("./db/db.json");
 // get /api/notes +get data from db.json
 
 app.get("/api/notes", function (req, res) {
-    
-    fs.readFile("./db/db.json", "UTF8", function(err) {
-       
+
+    fs.readFile("./db/db.json", "UTF8", function (err) {
+
         if (err)
-        throw err
-        
-    })
+            throw (err)
+
+    });
 
     return res.json(note);
 
@@ -60,21 +60,18 @@ app.post("/api/notes", function (req, res) {
 
     note.push(newNoteEntry);
 
-    
 
-    fs.writeFileSync("./db/db.json", JSON.stringify(note), function(err) {
 
-        if (err) 
-        throw err
+    fs.writeFileSync("./db/db.json", JSON.stringify(note), function (err) {
 
-            
-        });
+        if (err)
+            throw (err)
 
-        return res.status(200).end();
     });
 
-    
-    
+    return res.status(200).end();
+});
+
 
 
 
@@ -83,12 +80,31 @@ app.post("/api/notes", function (req, res) {
 
 app.delete("/api/notes/:id", function (req, res) {
 
-    for (var i = 0; i < note.length; i++) {
-        if (note[i].id === req.params.id) {
-            return res.json(note);
+    var deletedNote = note.filter(note => note.id != req.params.id);
 
-        }
-    };
+    fs.writeFileSync("./db/db.json", JSON.stringify(deletedNote), "UTF8", function (err) {
+
+        if (err)
+            throw (err)
+
+    });
+
+    return res.json(deletedNote);
+
+
+    // commented out old approach.
+
+    // for (var i = 0; i < note.length; i++) {
+    //     if (note[i].id === req.params.id) {
+
+
+    //         return res.json(note);
+
+    //     }
+    // };
+
+
+
 });
 
 
