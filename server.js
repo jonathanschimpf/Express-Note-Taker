@@ -54,7 +54,7 @@ app.post("/api/notes", function (req, res) {
 
     var newNoteEntry = req.body;
 
-    newNoteEntry.id = note.length;
+    newNoteEntry.id = note.length+1;
 
     console.log(newNoteEntry);
 
