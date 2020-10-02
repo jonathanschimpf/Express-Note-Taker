@@ -25,12 +25,21 @@ var note = require("./db/db.json");
 
 
 
+// **********
 // api routes
+// **********
 
 
 // get /api/notes +get data from db.json
 
 app.get("/api/notes", function (req, res) {
+    
+    fs.readFile("./db/db.json", "UTF8", function(err) {
+       
+        if (err)
+        throw err
+        
+    })
 
     return res.json(note);
 
@@ -53,18 +62,20 @@ app.post("/api/notes", function (req, res) {
 
     
 
-    // fs.writeFileSync("/api/notes", note, function(err) {
+    fs.writeFileSync("./db/db.json", JSON.stringify(note), function(err) {
 
-    //     if (err) {
+        if (err) 
+        throw err
 
-    //         return console.log(err);
-      
-    //     };
-    // });
+            
+        });
 
-    return res.status(200).end();
+        return res.status(200).end();
+    });
+
     
-});
+    
+
 
 
 // delete /api/notes/:id
@@ -73,7 +84,7 @@ app.post("/api/notes", function (req, res) {
 app.delete("/api/notes/:id", function (req, res) {
 
     for (var i = 0; i < note.length; i++) {
-        if (note[1].id === req.params.id) {
+        if (note[i].id === req.params.id) {
             return res.json(note);
 
         }
@@ -82,16 +93,9 @@ app.delete("/api/notes/:id", function (req, res) {
 
 
 
-// ^above needs much work
-//++++++++++++++++++++++++++++++++
-
-//+++++++++++++++++++++++++++++++++
-// * below is more or less complete.
-
-
-
-
+// ***********
 // html routes
+// ***********
 
 
 // public static informs the HTML of where it can find
