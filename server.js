@@ -7,6 +7,8 @@ const path = require("path");
 const fs = require("fs");
 const express = require("express");
 const app = express();
+var note = require("./db/db.json");
+
 
 
 var PORT = process.env.PORT || 7000;
@@ -20,8 +22,6 @@ var PORT = process.env.PORT || 7000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-var note = require("./db/db.json");
-
 
 
 
@@ -34,12 +34,12 @@ var note = require("./db/db.json");
 
 app.get("/api/notes", function (req, res) {
 
-    fs.readFile("./db/db.json", "UTF8", function (err) {
+    // fs.readFile("./db/db.json", "UTF8", function (err) {
 
-        if (err)
-            throw (err)
+    //     if (err)
+    //         throw (err)
 
-    });
+    // });
 
     return res.json(note);
 
@@ -80,19 +80,20 @@ app.post("/api/notes", function (req, res) {
 
 app.delete("/api/notes/:id", function (req, res) {
 
-    var deletedNote = note.splice(req.params.id, 1);
+    // note = note.splice(req.params.id, 1);
+    // console.log(note);
 
-    // var deletedNote = note.filter(note => note.id === req.params.id);
+    note = note.filter(note => note.id != req.params.id);
     
 
-    fs.writeFileSync("./db/db.json", JSON.stringify(deletedNote), "UTF8", function (err) {
+    fs.writeFileSync("./db/db.json", JSON.stringify(note), "UTF8", function (err) {
 
         if (err)
             throw (err)
 
     })
 
-    return res.json(deletedNote);
+    return res.json(note);
 
 
     // commented out old approach.
@@ -104,8 +105,6 @@ app.delete("/api/notes/:id", function (req, res) {
 
     //     }
     // };
-
-
 
 });
 
@@ -140,6 +139,8 @@ app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "public/index.html"));
 });
 
+
+//localhost:7000 link
 
 app.listen(PORT, () => {
     console.log(`The server is running on http://localhost:${PORT}/`);
