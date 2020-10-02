@@ -80,7 +80,9 @@ app.post("/api/notes", function (req, res) {
 
 app.delete("/api/notes/:id", function (req, res) {
 
-    var deletedNote = note.filter(note => note.id === req.params.id);
+    var deletedNote = note.splice(req.params.id, 1);
+
+    // var deletedNote = note.filter(note => note.id === req.params.id);
     
 
     fs.writeFileSync("./db/db.json", JSON.stringify(deletedNote), "UTF8", function (err) {
@@ -88,7 +90,7 @@ app.delete("/api/notes/:id", function (req, res) {
         if (err)
             throw (err)
 
-    });
+    })
 
     return res.json(deletedNote);
 
@@ -97,7 +99,6 @@ app.delete("/api/notes/:id", function (req, res) {
 
     // for (var i = 0; i < note.length; i++) {
     //     if (note[i].id === req.params.id) {
-
 
     //         return res.json(note);
 
