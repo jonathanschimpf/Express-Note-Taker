@@ -82,6 +82,11 @@ View a video overview on usage here:
 
 <p>&nbsp;<p>
 
+<p>&nbsp;<p>
+
+<img align="center">
+  <img width="460" height="300" src="readme_content/note.taker.gif">
+</img>
 
 <p>&nbsp;<p>
 
