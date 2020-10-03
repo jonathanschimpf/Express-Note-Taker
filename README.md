@@ -80,13 +80,19 @@ View a video overview on usage here:
 
 [![Sample](readme_content/note.taker_second.png)](https://https://note-taker-express-js.herokuapp.com/)
 
-<p>&nbsp;<p>
 
 <p>&nbsp;<p>
 
-<img align="center">
-  <img width="460" height="300" src="readme_content/note.taker.gif">
-</img>
+---
+
+<p>&nbsp;<p>
+
+
+<p align= "center">
+  <img  width="979" height="542" src="readme_content/note.taker.gif" alt="animated" />
+</p>
+
+
 
 <p>&nbsp;<p>
 
@@ -137,7 +143,7 @@ This project is covered under the MIT license.
 <p>&nbsp;‏‏‎‏‏‎ ‎<strong>+</strong></p>
 
 
-`Heroku` =>‏‏‎ ‎ ‏‏‎ ‎[A platform as a service that enables developers to build, run, and operate applications entirely in the cloud.](https://www.heroku.com)
+`Heroku` =>‏‏‎ ‎ ‏‏‎ ‎[A platform that enables developers to build, run, & operate applications entirely in the cloud.](https://www.heroku.com)
 
 
 
