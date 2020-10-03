@@ -72,13 +72,13 @@ View a video overview on usage here:
 
 <p>&nbsp;<p>
 
-[![Sample](readme_content/note.taker_main.png)](https://https://note-taker-express-js.herokuapp.com/)
+[![Sample](readme_content/note.taker_main.png)](https://note-taker-express-js.herokuapp.com/)
 
 <p>&nbsp;<p>
 
 <p>&nbsp;<p>
 
-[![Sample](readme_content/note.taker_second.png)](https://https://note-taker-express-js.herokuapp.com/)
+[![Sample](readme_content/note.taker_second.png)](https://note-taker-express-js.herokuapp.com/)
 
 
 <p>&nbsp;<p>
@@ -88,9 +88,13 @@ View a video overview on usage here:
 <p>&nbsp;<p>
 
 
+
+
+<kbd>
 <p align= "center">
   <img  width="979" height="542" src="readme_content/note.taker.gif" alt="animated" />
 </p>
+</kbd>
 
 
 
