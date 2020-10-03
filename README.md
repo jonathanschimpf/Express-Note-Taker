@@ -83,26 +83,22 @@ View a video overview on usage here:
 
 <p>&nbsp;<p>
 
----
-
-<p>&nbsp;<p>
-
-
-
-
-<kbd>
-<p align= "center">
-  <img  width="979" height="542" src="readme_content/note.taker.gif" alt="animated" />
-</p>
-</kbd>
-
 
 
 <p>&nbsp;<p>
 
 
+
 ---
 
+<p align= "center"><img  width="979" height="542" src="readme_content/note.taker.gif" alt="animated" /></p>
+
+---
+
+
+<p>&nbsp;<p>
+
+---
 
 <p>&nbsp;<p>
 
