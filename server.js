@@ -35,10 +35,8 @@ app.use(express.json());
 app.get("/api/notes", function (req, res) {
 
     // fs.readFile("./db/db.json", "UTF8", function (err) {
-
     //     if (err)
     //         throw (err)
-
     // });
 
     return res.json(note);
@@ -100,9 +98,7 @@ app.delete("/api/notes/:id", function (req, res) {
 
     // for (var i = 0; i < note.length; i++) {
     //     if (note[i].id === req.params.id) {
-
     //         return res.json(note);
-
     //     }
     // };
 
