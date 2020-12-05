@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, height=device-heigth, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Note.Taker</title>
 
@@ -44,6 +44,8 @@
 
   <style>
 
+
+
     .bg-dark {
 
       background-color: black !important;
@@ -55,15 +57,68 @@
     body {
 
       font-family: 'Montserrat', sans-serif !important;
+      height: 100%
 
     }
 
-    
+    .card {
+
+      /* height: 100vh !important; */
+      /* border-right: none !important; */
+      border-bottom: none !important;
+    }
+
+
   </style>
 
 </head>
 
 <body>
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">Note.Taker
+    </a>
+    <div class="icons">
+      <i class="fas fa-save text-light save-note"></i>
+      <i class="fas fa-pen text-light new-note"></i>
+    </div>
+  </nav>
+  <div class="container-fluid h-100">
+    <div class="row flex-grow-1 overflow-auto">
+      <div class="col-4 list-container flex-column">
+        <div class="card flex-grow-1">
+          <ul class="list-group">
+          </ul>
+        </div>
+      </div>
+      <div class="col-8 flex-column">
+        <textarea class="note-title js-auto-size" rows="1" placeholder="New Note" style="font-size: 2rem"></textarea>
+        <textarea class="note-textarea js-auto-size" rows="1" placeholder="Enter note information here.."></textarea>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="/assets/js/index.js"></script>
+  <script src="jquery.textarea_autosize.min.js"></script>
+<script>
+  $('textarea.js-auto-size').textareaAutoSize();
+</script> 
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+<!-- old -->
+
+
+
+<!-- <body>
   <nav class="navbar navbar-dark bg-dark">
     <a class="navbar-brand" href="/">Note.Taker
     </a>
@@ -81,8 +136,8 @@
         </div>
       </div>
       <div class="col-8">
-        <input class="note-title" placeholder="New Note" maxlength="28" type="text" style="font-size: 2.5rem">
-        <textarea class="note-textarea" placeholder="Enter information here.."></textarea>
+        <textarea class="note-title textarea-autosize" placeholder="New Note" style="font-size: 2rem"></textarea>
+        <textarea class="note-textarea textarea-autosize" placeholder="Enter information here.."></textarea>
       </div>
     </div>
   </div>
@@ -90,4 +145,4 @@
   <script src="/assets/js/index.js"></script>
 </body>
 
-</html>
+</html> -->

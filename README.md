@@ -91,7 +91,7 @@ View a video overview on usage here:
 
 ---
 
-<p align= "center"><img  width="979" height="542" src="readme_content/note.taker.gif" alt="animated" /></p>
+<p align= "center"><img  width="979" height="542" src="readme_content/note.taker.gif" alt="animated" href="https://note-taker-express-js.herokuapp.com/"/></p>
 
 ---
 
