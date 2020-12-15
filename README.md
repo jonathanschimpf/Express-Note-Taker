@@ -15,7 +15,7 @@
 
 <p>&nbsp;<p>
 
-This is another take on a classic application that we all use on a daily basis. A digital notepad. It does exactly what you would imagine it does. You are able to author notes, save them, revisit them at a later time, and delete them when those thoughts aren't needed any longer. Never forget items on your grocery list again. List your monthly bills and check them off once you've paid them all. Record your thoughts when that next big idea comes to mind. It's your call. This application utilizes `Node.js` and more specifically `Express.js` for backend saving and retreiving of note information. It has been optimized for usage on all devices, and will store data entries indefinitely. 
+This is another take on a classic application that we all use on a daily basis. A digital notepad. It does exactly what you would imagine it does. You are able to author notes, save them, revisit them at a later time, and delete them when those thoughts aren't needed any longer. Never forget items on your grocery list again. List your monthly bills and check them off once you've paid them all. Record your thoughts when that next big idea comes to mind. It's your call. This application was built in a `Node.js` environment and utilizes `Express.js` for saving and retrieving note information from the database. It has been optimized for usage on all devices, and will store data entries indefinitely. 
 
 <p>&nbsp;<p>
 
